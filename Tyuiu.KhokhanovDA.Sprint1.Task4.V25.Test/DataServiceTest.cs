@@ -1,21 +1,21 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-using Tyuiu.KhokhanovDA.sprint1.Task4.V25.Lib;
+using Tyuiu.KhokhanovDA.Sprint1.Task4.V25.Lib;
 
-namespace Tyuiu.KhokhanovDA.sprint1.Task4.V25.Test
+namespace Tyuiu.KhokhanovDA.Sprint1.Task4.V25.Test
 {
     [TestClass]
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidExpression()
         {
             DataService ds = new DataService();
-            double x = 0;
-            var res = ds.Calculate(x);
-            Assert.AreEqual(1, res);
-
+            double a = 30;
+            double wait = Math.Round(0.866362, 3);
+            var res = ds.Calculate(a);
+            Assert.AreEqual(wait, Math.Round(res, 3));
         }
     }
 }
