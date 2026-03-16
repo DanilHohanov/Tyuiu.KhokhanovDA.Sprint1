@@ -1,10 +1,12 @@
-﻿
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+
 using Tyuiu.KhokhanovDA.Sprint1.Task5.V5.Lib;
 
 namespace Tyuiu.KhokhanovDA.Sprint1.Task5.V5.Test
 {
     [TestClass]
-    public sealed class DataServiceTest
+    public class DataServiceTest
     {
         [TestMethod]
         public void ValidExpression()
@@ -12,7 +14,8 @@ namespace Tyuiu.KhokhanovDA.Sprint1.Task5.V5.Test
             double x = 32.597;
             DataService ds = new DataService();
             double res = ds.Calculate(x);
-            _ = Convert.ToInt32(res);
+
+            int result = Convert.ToInt32(res);
             int wait = 5;
             Assert.AreEqual(wait, 0, 597);
         }
