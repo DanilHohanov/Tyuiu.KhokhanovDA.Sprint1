@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using tyuiu.cources.programming.interfaces.Sprint1;
+﻿using tyuiu.cources.programming.interfaces.Sprint1;
 
 namespace Tyuiu.KhokhanovDA.Sprint1.Task4.V25.Lib
 {
@@ -12,8 +6,7 @@ namespace Tyuiu.KhokhanovDA.Sprint1.Task4.V25.Lib
     {
         public double Calculate(double a)
         {
-            var res = (1 - Math.Cos(a)) / (Math.Pow(Math.Sin(a), 2));
-            return res;
+            return Math.Round((1 - Math.Cos(a)) / Math.Pow(Math.Sin(a), 2), 3);
         }
     }
 }
