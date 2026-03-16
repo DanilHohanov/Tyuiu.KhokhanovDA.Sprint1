@@ -1,22 +1,16 @@
-
-using Newtonsoft.Json.Linq;
-using System.Security.Cryptography.X509Certificates;
-using Tyuiu.KhokhanovDA.Sprint1.Task6.V8.Lib;
-
-
+﻿using Tyuiu.KhokhanovDA.Sprint1.Task6.V8.Lib;
 namespace Tyuiu.KhokhanovDA.Sprint1.Task6.V8.Test
 {
     [TestClass]
-    public class DataServiceTest
+    public sealed class DataServiceTest
     {
         [TestMethod]
-        public void ValidExpression()
+        public void TestMethod1()
         {
-            string strTest = "Hello";
             DataService ds = new DataService();
-            string res = ds.MoveLetterToEnd(strTest);
-            string wait = "elloH";
-            Assert.AreEqual(wait, res);
+            string a = "сегодня хороший день";
+            string b = ds.MoveLetterToEnd(a);
+            Assert.AreEqual("егодняс орошийх еньд", b);
         }
     }
 }

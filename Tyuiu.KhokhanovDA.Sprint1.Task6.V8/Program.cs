@@ -1,24 +1,17 @@
-
-using Tyuiu.KhokhanovDA.Sprint1.Task6.V8.Lib;
-
-
+ï»¿using Tyuiu.KhokhanovDA.Sprint1.Task6.V8.Lib;
 namespace Tyuiu.KhokhanovDA.Sprint1.Task6.V8
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ââåäèòå òåêñò:");
             DataService ds = new DataService();
-            string str = Console.ReadLine();
-            string[] words = str.Split(' ');
-            foreach (string word in words)
-            {
-                Console.WriteLine((word + word[0]).Remove(0, 1));
-            }
-
+            Console.WriteLine("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ñ€ÐµÐ´Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ: ");
+            string x;
+            x = Console.ReadLine();
+            string es = ds.MoveLetterToEnd(x);
+            Console.WriteLine(es);
             Console.ReadKey();
-
         }
     }
 }

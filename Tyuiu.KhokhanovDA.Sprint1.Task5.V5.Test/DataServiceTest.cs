@@ -1,23 +1,16 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-
-using Tyuiu.KhokhanovDA.Sprint1.Task5.V5.Lib;
-
+﻿using Tyuiu.KhokhanovDA.Sprint1.Task5.V5.Lib;
 namespace Tyuiu.KhokhanovDA.Sprint1.Task5.V5.Test
 {
     [TestClass]
-    public class DataServiceTest
+    public sealed class DataServiceTest
     {
         [TestMethod]
-        public void ValidExpression()
+        public void TestMethod1()
         {
-            double x = 32.597;
             DataService ds = new DataService();
-            double res = ds.Calculate(x);
-
-            int result = Convert.ToInt32(res);
-            int wait = 5;
-            Assert.AreEqual(wait, 0, 597);
+            double x = 123.647;
+            var res = ds.Calculate(x);
+            Assert.AreEqual(6, res);
         }
     }
 }
